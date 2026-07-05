@@ -23,7 +23,6 @@ function App() {
   const hours = minutes / 60;
   const days = hours / 24;
 
-  const remainingDays = (Math.floor(days));
   const remainderHours = (days - Math.floor(days)) * 24;
   const remainderMinutes = ((hours - Math.floor(hours)) * 60);
   const remainderSeconds =  (minutes - Math.floor(minutes)) * 60;
