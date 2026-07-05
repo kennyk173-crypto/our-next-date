@@ -4,6 +4,17 @@ import { useEffect } from 'react';
 
 function App() {
 
+  // const videos = [
+  //   "/videos/mov1.mp4",
+  //   "/videos/mov2.mp4",
+  //   "/videos/mov3.mp4",
+  //   "/videos/mov4.mp4",
+  //   "/videos/movcenter.mp4"
+  // ];
+
+  // const [currentVideo, setCurrentVideo] = useState(0);
+  
+
   const reunion = new Date("2026-07-29T19:00:00");
   const [now, setNow] = useState(new Date());
 
@@ -35,7 +46,16 @@ function App() {
     <div>
     <h1>❤️ Our Next Date ❤️</h1>
 
-     <h2>{Math.floor(days)} {Math.floor(days) == 1 ? "Day" : "Days"}</h2>
+    <video src = "/videos/movcenter.MP4"
+      className='memory-video'
+      autoPlay
+      muted
+      loop
+      playsInline
+      controls
+    />
+
+    <h2>{Math.floor(days)} {Math.floor(days) == 1 ? "Day" : "Days"}</h2>
 
     {/* <h2>{days} Days</h2> */}
 

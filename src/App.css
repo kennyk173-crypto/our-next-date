@@ -14,3 +14,9 @@ body {
 div {
   text-align: center;
 }
+
+.memory-video {
+  width: 300px;
+  height:min-content;
+  
+}
