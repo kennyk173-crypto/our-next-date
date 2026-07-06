@@ -38,38 +38,46 @@ function App() {
   const remainderMinutes = ((hours - Math.floor(hours)) * 60);
   const remainderSeconds =  (minutes - Math.floor(minutes)) * 60;
 
-
-
-
   return (
 
-    <div>
-    <h1>❤️ Our Next Date ❤️</h1>
+    <div className='container'> 
 
-    <video src = "/videos/movcenter.MP4"
-      className='memory-video'
-      autoPlay
-      muted
-      loop
-      playsInline
-      controls
-    />
+      <div className='sidebar'>
 
-    <h2>{Math.floor(days)} {Math.floor(days) == 1 ? "Day" : "Days"}</h2>
+      <h2>Dates</h2>
+      <p>Aquarium</p>
+      <p>Dinner</p>
+      <p>Hiking</p>
+      </div>
 
-    {/* <h2>{days} Days</h2> */}
+      <div className='content'> 
+      <h1>❤️ Our Next Date ❤️</h1>
 
-    {/* <h2>{hours} Hours</h2> */}
-    <h2>{Math.floor(remainderHours)} {Math.floor(remainderHours) == 1 ? "Hour" : "Hours"}</h2>
+      <video src = "/videos/movcenter.MP4"
+        className='memory-video'
+        autoPlay
+        muted
+        loop
+        playsInline
+        controls
+      />
 
-    {/* <h2>{minutes} Minutes</h2> */}
-    <h2>{Math.floor(remainderMinutes)} {Math.floor(remainderMinutes) == 1 ? "Minute" : "Minutes"}</h2>
+      <h2>{Math.floor(days)} {Math.floor(days) == 1 ? "Day" : "Days"}</h2>
 
-    {/* <h2>{seconds} Seconds</h2> */}
-    <h2>{Math.floor(remainderSeconds)} {Math.floor(remainderSeconds) == 1 ? "Second" : "Seconds"} </h2>
+      {/* <h2>{days} Days</h2> */}
 
-    {/* <h2>{remainingTime}</h2> */}
-</div>
+      {/* <h2>{hours} Hours</h2> */}
+      <h2>{Math.floor(remainderHours)} {Math.floor(remainderHours) == 1 ? "Hour" : "Hours"}</h2>
+
+      {/* <h2>{minutes} Minutes</h2> */}
+      <h2>{Math.floor(remainderMinutes)} {Math.floor(remainderMinutes) == 1 ? "Minute" : "Minutes"}</h2>
+
+      {/* <h2>{seconds} Seconds</h2> */}
+      <h2>{Math.floor(remainderSeconds)} {Math.floor(remainderSeconds) == 1 ? "Second" : "Seconds"} </h2>
+
+      {/* <h2>{remainingTime}</h2> */}
+    </div>
+  </div>
     
   );
 }
