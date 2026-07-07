@@ -81,10 +81,12 @@ function App() {
 
       <div className='content'> 
         <div className='content-panel'> 
-          
           <div className='time-card'>
-          <div className='time-label'>
-            <div className="time-label">
+
+           <div className='time-number'>
+              REUNION 🫶
+              </div>
+          <div className="time-label">
             🤍 Today is {now.toLocaleString("en-US", {
             weekday: "long",
             month: "long",
@@ -93,7 +95,7 @@ function App() {
             hour: "numeric",
             minute: "2-digit",
            })} 🤍
-            </div>
+
             </div>
             </div>
             <div className='divider'></div>
@@ -108,7 +110,7 @@ function App() {
             playsInline
             controls
           />
-
+          
           <div className='divider'></div>
 
           <div className = 'countdown'>
@@ -183,7 +185,7 @@ function App() {
               </div>
 
               <div className="time-label">
-                  I can't wait to see you again, baby
+                  I can't wait to see you again, baby 🤍
               </div>
             </div>
           </div>
