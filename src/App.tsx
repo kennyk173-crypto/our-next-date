@@ -81,7 +81,21 @@ function App() {
 
       <div className='content'> 
         <div className='content-panel'> 
-          <h1>❤️ Reunion Day ❤️</h1>
+          <div className="time-label">
+            Today is {now.toLocaleString("en-US", {
+            weekday: "long",
+            month: "long",
+            day: "numeric",
+            year: "numeric",
+            hour: "numeric",
+            minute: "2-digit",
+           })}
+        </div>
+          <div className='time-card'>
+          <div className='time-label'>
+            Reunion ❤️
+            </div>
+            </div>
 
           <video 
             src = "/videos/mov5.MP4"
@@ -94,22 +108,77 @@ function App() {
             controls
           />
           <div className = 'countdown'>
-            <h2 className='time-card'>{Math.floor(days)} {Math.floor(days) == 1 ? "Day" : "Days"}</h2>
+            
+            <div className="time-card">
+
+                <div className="time-number">
+                    {Math.floor(days)}
+                </div>
+
+                <div className="time-label">
+                    {Math.floor(days) === 1 ? "Day" : "Days"}
+                </div>
+
+            </div>
 
             {/* <h2>{days} Days</h2> */}
 
             {/* <h2>{hours} Hours</h2> */}
-            <h2 className ='time-card'>{Math.floor(remainderHours)} {Math.floor(remainderHours) == 1 ? "Hour" : "Hours"}</h2>
+            <div className="time-card">
+
+                <div className="time-number">
+                    {Math.floor(remainderHours)}
+                </div>
+
+                <div className="time-label">
+                    {Math.floor(remainderHours) === 1 ? "Hour" : "Hours"}
+                </div>
+
+            </div>
 
             {/* <h2>{minutes} Minutes</h2> */}
-            <h2 className = 'time-card'>{Math.floor(remainderMinutes)} {Math.floor(remainderMinutes) == 1 ? "Minute" : "Minutes"}</h2>
+           
+          
+              <div className="time-card">
+
+                <div className="time-number">
+                    {Math.floor(remainderMinutes)}
+                </div>
+
+                <div className="time-label">
+                    {Math.floor(remainderMinutes) === 1 ? "Minute" : "Minutes"}
+                </div>
+
+            </div>  
 
             {/* <h2>{seconds} Seconds</h2> */}
-            <h2 className = 'time-card'>{Math.floor(remainderSeconds)} {Math.floor(remainderSeconds) == 1 ? "Second" : "Seconds"} </h2>
+            <div className="time-card">
+
+                <div className="time-number">
+                    {Math.floor(remainderSeconds)}
+                </div>
+
+                <div className="time-label">
+                    {Math.floor(remainderSeconds) === 1 ? "Second" : "Seconds"}
+                </div>
+
+            </div>
 
           {/* <h2>{remainingTime}</h2> */}
           </div>
+          <div className="bottom-info">
+
+              <div className="time-label">
+                  July 29, 2026 • 7:00 PM
+              </div>
+
+              <div className="time-label">
+                  I can't wait to marry you
+              </div>
+
+          </div>
         </div>
+        
       </div>
   </div>
   );
