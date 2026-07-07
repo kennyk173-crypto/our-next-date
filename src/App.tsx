@@ -173,7 +173,7 @@ function App() {
               </div>
 
               <div className="time-label">
-                  I can't wait to marry you
+                  I can't wait to eat dinner
               </div>
 
           </div>
