@@ -1,6 +1,7 @@
 import './App.css'
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useEffect } from 'react';
+// import type { PlannedDate } from './types/PlannedDate';
 
 function App() {
 
@@ -15,8 +16,9 @@ function App() {
   // const [currentVideo, setCurrentVideo] = useState(0);
   
 
-  const reunion = new Date("2026-07-29T19:00:00");
+  const selectedDate = new Date("2026-07-29T19:00:00");
   const [now, setNow] = useState(new Date());
+
 
   useEffect(() => {
 
@@ -27,7 +29,7 @@ function App() {
     return () => clearInterval(timer);
   }, []);
 
-  const remainingTime = reunion.getTime() - now.getTime();
+  const remainingTime = selectedDate.getTime() - now.getTime();
 
   const seconds = remainingTime / 1000;
   const minutes = seconds / 60;
@@ -38,47 +40,77 @@ function App() {
   const remainderMinutes = ((hours - Math.floor(hours)) * 60);
   const remainderSeconds =  (minutes - Math.floor(minutes)) * 60;
 
+  // const dates: PlannedDate [] = [
+  //   {
+  //     name: "Reunion",
+  //     place: "Taoyuan International Aiport",
+  //     dateTime: new Date("2026-07-29T19:00:00"),
+  //   },
+  //   {
+  //     name: "Beach",
+  //     place: "Yilan",
+  //     dateTime: new Date("2026-07-31T19:00:00"),
+  //   }
+  // ];
+
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+        videoRef.current.playbackRate = 0.5;
+    }
+}, []);
+
   return (
 
     <div className='container'> 
 
-      <div className='sidebar'>
-
-      <h2>Dates</h2>
-      <p>Aquarium</p>
-      <p>Dinner</p>
-      <p>Hiking</p>
-      </div>
+      {/* <div className='sidebar'>
+        <div className = 'date-list'>
+      
+          <h2>Dates</h2>
+          {dates.map((date, index) => (
+            <div key = {index}
+           
+            >
+              {date.name}
+            </div>
+          ))}
+       </div>
+      </div> */}
 
       <div className='content'> 
-      <h1>❤️ Our Next Date ❤️</h1>
+        <div className='content-panel'> 
+          <h1>❤️ Reunion Day ❤️</h1>
 
-      <video src = "/videos/movcenter.MP4"
-        className='memory-video'
-        autoPlay
-        muted
-        loop
-        playsInline
-        controls
-      />
+          <video 
+            src = "/videos/mov1.MP4"
+            ref = {videoRef}
+            className='memory-video'
+            autoPlay
+            muted
+            loop
+            playsInline
+            controls
+          />
 
-      <h2>{Math.floor(days)} {Math.floor(days) == 1 ? "Day" : "Days"}</h2>
+          <h2>{Math.floor(days)} {Math.floor(days) == 1 ? "Day" : "Days"}</h2>
 
-      {/* <h2>{days} Days</h2> */}
+          {/* <h2>{days} Days</h2> */}
 
-      {/* <h2>{hours} Hours</h2> */}
-      <h2>{Math.floor(remainderHours)} {Math.floor(remainderHours) == 1 ? "Hour" : "Hours"}</h2>
+          {/* <h2>{hours} Hours</h2> */}
+          <h2>{Math.floor(remainderHours)} {Math.floor(remainderHours) == 1 ? "Hour" : "Hours"}</h2>
 
-      {/* <h2>{minutes} Minutes</h2> */}
-      <h2>{Math.floor(remainderMinutes)} {Math.floor(remainderMinutes) == 1 ? "Minute" : "Minutes"}</h2>
+          {/* <h2>{minutes} Minutes</h2> */}
+          <h2>{Math.floor(remainderMinutes)} {Math.floor(remainderMinutes) == 1 ? "Minute" : "Minutes"}</h2>
 
-      {/* <h2>{seconds} Seconds</h2> */}
-      <h2>{Math.floor(remainderSeconds)} {Math.floor(remainderSeconds) == 1 ? "Second" : "Seconds"} </h2>
+          {/* <h2>{seconds} Seconds</h2> */}
+          <h2>{Math.floor(remainderSeconds)} {Math.floor(remainderSeconds) == 1 ? "Second" : "Seconds"} </h2>
 
-      {/* <h2>{remainingTime}</h2> */}
-    </div>
+          {/* <h2>{remainingTime}</h2> */}
+        </div>
+      </div>
   </div>
-    
   );
 }
 
