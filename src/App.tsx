@@ -98,7 +98,7 @@ function App() {
 
             </div>
             </div>
-            <div className='divider'></div>
+            <div className='divider-top'></div>
 
           <video 
             src = "/videos/mov5.MP4"
@@ -111,7 +111,7 @@ function App() {
             controls
           />
           
-          <div className='divider'></div>
+          <div className='divider-top'></div>
 
           <div className = 'countdown'>
             

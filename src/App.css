@@ -37,7 +37,7 @@ div {
     align-items: center;
 
     box-shadow:
-      0 10px 40px rgba(0,0,0,0.12);
+      0 20px 40px rgba(0,0,0,0.12);
 
 }
 .memory-video {
@@ -65,6 +65,15 @@ div {
     flex-direction: column;
     align-items: center;
     gap: 14px;
+}
+.divider-top {
+    width: 220px;
+    padding: 10px;
+    border: none;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.00);
+
+    margin: 15px auto;
 }
 .divider {
     width: 220px;
