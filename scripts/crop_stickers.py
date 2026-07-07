@@ -1,10 +1,8 @@
 from PIL import Image
-image = Image.open("stickers.PNG")
-# print(image.size)
 
-# cropped = image.crop(0, 250, 1170, 2282)
-# cropped.save("cropped.png")
+image = Image.open("public/pictures/stickers.PNG")
+print(image.size)
 
-for row in range(4):
-    for column in range(3):
-        print(row, column)
+cropped = image.crop((0, 250, 1170, 2250))
+
+cropped.save("cropped.png")

@@ -84,7 +84,7 @@ function App() {
           <h1>❤️ Reunion Day ❤️</h1>
 
           <video 
-            src = "/videos/mov1.MP4"
+            src = "/videos/mov5.MP4"
             ref = {videoRef}
             className='memory-video'
             autoPlay
@@ -93,21 +93,22 @@ function App() {
             playsInline
             controls
           />
+          <div className = 'countdown'>
+            <h2 className='time-card'>{Math.floor(days)} {Math.floor(days) == 1 ? "Day" : "Days"}</h2>
 
-          <h2>{Math.floor(days)} {Math.floor(days) == 1 ? "Day" : "Days"}</h2>
+            {/* <h2>{days} Days</h2> */}
 
-          {/* <h2>{days} Days</h2> */}
+            {/* <h2>{hours} Hours</h2> */}
+            <h2 className ='time-card'>{Math.floor(remainderHours)} {Math.floor(remainderHours) == 1 ? "Hour" : "Hours"}</h2>
 
-          {/* <h2>{hours} Hours</h2> */}
-          <h2>{Math.floor(remainderHours)} {Math.floor(remainderHours) == 1 ? "Hour" : "Hours"}</h2>
+            {/* <h2>{minutes} Minutes</h2> */}
+            <h2 className = 'time-card'>{Math.floor(remainderMinutes)} {Math.floor(remainderMinutes) == 1 ? "Minute" : "Minutes"}</h2>
 
-          {/* <h2>{minutes} Minutes</h2> */}
-          <h2>{Math.floor(remainderMinutes)} {Math.floor(remainderMinutes) == 1 ? "Minute" : "Minutes"}</h2>
-
-          {/* <h2>{seconds} Seconds</h2> */}
-          <h2>{Math.floor(remainderSeconds)} {Math.floor(remainderSeconds) == 1 ? "Second" : "Seconds"} </h2>
+            {/* <h2>{seconds} Seconds</h2> */}
+            <h2 className = 'time-card'>{Math.floor(remainderSeconds)} {Math.floor(remainderSeconds) == 1 ? "Second" : "Seconds"} </h2>
 
           {/* <h2>{remainingTime}</h2> */}
+          </div>
         </div>
       </div>
   </div>
