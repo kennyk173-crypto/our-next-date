@@ -81,21 +81,22 @@ function App() {
 
       <div className='content'> 
         <div className='content-panel'> 
-          <div className="time-label">
-            Today is {now.toLocaleString("en-US", {
+          
+          <div className='time-card'>
+          <div className='time-label'>
+            <div className="time-label">
+            🤍 Today is {now.toLocaleString("en-US", {
             weekday: "long",
             month: "long",
             day: "numeric",
             year: "numeric",
             hour: "numeric",
             minute: "2-digit",
-           })}
-        </div>
-          <div className='time-card'>
-          <div className='time-label'>
-            Reunion ❤️
+           })} 🤍
             </div>
             </div>
+            </div>
+            <div className='divider'></div>
 
           <video 
             src = "/videos/mov5.MP4"
@@ -107,6 +108,9 @@ function App() {
             playsInline
             controls
           />
+
+          <div className='divider'></div>
+
           <div className = 'countdown'>
             
             <div className="time-card">
@@ -166,16 +170,22 @@ function App() {
 
           {/* <h2>{remainingTime}</h2> */}
           </div>
+          <hr className="divider" />
           <div className="bottom-info">
+            <div className='time-card'>
 
               <div className="time-label">
+                  ✈️ INDONESIA → TAIPEI
+              </div>
+
+                <div className="time-label">
                   July 29, 2026 • 7:00 PM
               </div>
 
               <div className="time-label">
-                  I can't wait to eat dinner
+                  I can't wait to see you again, baby
               </div>
-
+            </div>
           </div>
         </div>
         
