@@ -99,7 +99,7 @@ function App() {
             </div>
             </div>
             <div className='divider-top'></div>
-
+          <div className='time-card'>
           <video 
             src = "/videos/mov5.MP4"
             ref = {videoRef}
@@ -110,6 +110,7 @@ function App() {
             playsInline
             controls
           />
+          </div>
           
           <div className='divider-top'></div>
 
@@ -172,7 +173,7 @@ function App() {
 
           {/* <h2>{remainingTime}</h2> */}
           </div>
-          <hr className="divider" />
+          <hr className="divider-top" />
           <div className="bottom-info">
             <div className='time-card'>
 
